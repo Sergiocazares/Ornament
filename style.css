@@ -1,0 +1,19 @@
+* {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+root {
+    #c30031;
+    #002b66;
+    animDur: 4s;
+    font-size: calc(20px + (30 - 20) * (100vw - 320px) / (1280 - 320));
+}
+body {
+    background: var(bg);
+    display: grid;
+    place-items: center;
+    font: 1em/1.5 serif;
+    height: 100vh;
+}
