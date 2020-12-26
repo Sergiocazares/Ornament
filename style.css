@@ -59,3 +59,94 @@ body {
 .ornament__cap {
     animation: petalsRotate var(--animDur) linear infinite;
 }
+.ornament__cap-petal,
+.ornament__cap-petal-shadow {
+    --clipPath: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
+    clip-path: var(--clipPath);
+    -webkit-clip-path: var(--clipPath);
+    left: 50%;
+    width: 0.7em;
+    transform-origin: 50% 0;
+}
+.ornament__cap-petal {
+    animation: petalGlare var(--animDur) linear infinite;
+    background-color: #ae8a71;
+    background-image: linear-gradient(30deg, #d3c0b2 24%, #d3c0b200 25%),
+    linear-gradient(-30deg, #d3c0b2 24%, #d3c0b200 25%),
+    radial-gradient(0.1em 0.1em at 0.2em 0.2em, #d3c0b2 49%, #d3c0b200 50%),
+    radial-gradient(0.1em 0.1em at 0.5em 0.2em, #d3c0b2 49%, #d3c0b200 50%),
+    radial-gradient(0.1em 0.1em at 0.2em 0.4em, #d3c0b2 49%, #d3c0b200 50%),
+    radial-gradient(0.1em 0.1em at 0.5em 0.4em, #d3c0b2 49%, #d3c0b200 50%),
+    radial-gradient(0.1em 0.1em at 0.2em 0.6em, #d3c0b2 49%, #d3c0b200 50%),
+    radial-gradient(0.1em 0.1em at 0.5em 0.6em, #d3c0b2 49%, #d3c0b200 50%),
+    radial-gradient(0.1em 0.1em at 0.2em 0.25em, #0003 49%, #0000 50%),
+    radial-gradient(0.1em 0.1em at 0.5em 0.25em, #0003 49%, #0000 50%),
+    radial-gradient(0.1em 0.1em at 0.2em 0.45em, #0003 49%, #0000 50%),
+    radial-gradient(0.1em 0.1em at 0.5em 0.45em, #0003 49%, #0000 50%),
+    radial-gradient(0.1em 0.1em at 0.2em 0.65em, #0003 49%, #0000 50%),
+    radial-gradient(0.1em 0.1em at 0.5em 0.65em, #0003 49%, #0000 50%);
+    box-shadow: 0.1em 0 0 #d3c0b2 inset, -0.1em 0 0 #d3c0b2 inset;
+    transform: translateX(-50%) rotateY(0deg) translateZ(0.875em) rotateX(8deg);
+}
+.ornament__cap-petal:nth-child(even) {
+    animation-delay: calc(var(--animDur) / -8);
+    background-color: #d3c0b2;
+}
+.ornament__cap-petal:nth-child(2) {
+    transform: translateX(-50%) rotateY(45deg) translateZ(0.875em) rotateX(8deg);
+}
+.ornament__cap-petal:nth-child(3) {
+    transform: translateX(-50%) rotateY(90deg) translateZ(0.875em) rotateX(8deg);
+}
+.ornament__cap-petal:nth-child(4) {
+    transform: translateX(-50%) rotateY(135deg) translateZ(0.875em) rotateX(8deg);
+}
+.ornament__cap-petal:nth-child(5) {
+    transform: translateX(-50%) rotateY(180deg) translateZ(0.875em) rotateX(8deg);
+}
+.ornament__cap-petal:nth-child(6) {
+    transform: translateX(-50%) rotateY(225deg) translateZ(0.875em) rotateX(8deg);
+}
+.ornament__cap-petal:nth-child(7) {
+    transform: translateX(-50%) rotateY(270deg) translateZ(0.875em) rotateX(8deg);
+}
+.ornament__cap-petal:nth-child(8) {
+    transform: translateX(-50%) rotateY(315deg) translateZ(0.875em) rotateX(8deg);
+}
+.ornament__cap-petal-shadow {
+    background-color: #0007;
+    transform: translateX(-50%) rotateY(0deg) translateZ(0.875em)
+    translateY(0.05em);
+}
+.ornament__cap-petal-shadow:nth-child(10) {
+    transform: translateX(-50%) rotateY(45deg) translateZ(0.875em)
+    translateY(0.05em);
+}
+.ornament__cap-petal-shadow:nth-child(11) {
+    transform: translateX(-50%) rotateY(90deg) translateZ(0.875em)
+    translateY(0.05em);
+}
+.ornament__cap-petal-shadow:nth-child(12) {
+    transform: translateX(-50%) rotateY(135deg) translateZ(0.875em)
+    translateY(0.05em);
+}
+.ornament__cap-petal-shadow:nth-child(13) {
+    transform: translateX(-50%) rotateY(180deg) translateZ(0.875em)
+    translateY(0.05em);
+}
+.ornament__cap-petal-shadow:nth-child(14) {
+    transform: translateX(-50%) rotateY(225deg) translateZ(0.875em)
+    translateY(0.05em);
+}
+.ornament__cap-petal-shadow:nth-child(15) {
+    transform: translateX(-50%) rotateY(270deg) translateZ(0.875em)
+    translateY(0.05em);
+}
+.ornament__cap-petal-shadow:last-child {
+    transform: translateX(-50%) rotateY(315deg) translateZ(0.875em)
+    translateY(0.05em);
+}
+.ornament__mouth,
+.ornament__bulb {
+    background-color: var(--fg);
+}
