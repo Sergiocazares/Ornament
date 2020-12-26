@@ -150,3 +150,21 @@ body {
 .ornament__bulb {
     background-color: var(--fg);
 }
+.ornament__mouth {
+    box-shadow: 0 0.2em 0 #d3c0b2 inset, 0.2em 0 0.2em #000a inset,
+    -0.4em 0 0.2em #000a inset, 0 -0.1em 0.1em var(--fg) inset,
+    -0.9em 0 0.2em #000a inset, 0 0.1em 0.1em #0007;
+    height: 1.1em;
+    will-change: transform;
+}
+.ornament__bulb {
+    background-image: radial-gradient(100% 100% at 30% 30%, #fff7, #fff0 50%),
+    radial-gradient(25% 60% at 95% 40%, #fff3 5%, #fff0 50%),
+    radial-gradient(100% 100% at 90% 90%, #0004, #0000 50%),
+    linear-gradient(90deg, #0000, #0005);
+    box-shadow: 0.4em 0.4em 0.5em #0007 inset, 0 0 0.5em #0007 inset;
+    top: 1.75em;
+    left: 0;
+    height: 6.75em;
+    transform: translateZ(-1px);
+}
