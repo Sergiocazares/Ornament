@@ -4,16 +4,58 @@
     margin: 0;
     padding: 0;
 }
-root {
-    #c30031;
-    #002b66;
-    animDur: 4s;
+:root {
+    --bg: #c30031;
+    --fg: #002b66;
+    --animDur: 4s;
     font-size: calc(20px + (30 - 20) * (100vw - 320px) / (1280 - 320));
 }
 body {
-    background: var(bg);
+    background: var(--bg);
     display: grid;
     place-items: center;
     font: 1em/1.5 serif;
     height: 100vh;
+}
+.ornament,
+.ornament__bulb {
+    width: 6.75em;
+}
+.ornament {
+    position: relative;
+    height: 8.5em;
+}
+.ornament,
+.ornament div {
+    transform-style: preserve-3d;
+}
+.ornament div {
+    position: absolute;
+}
+.ornament__hoop,
+.ornament__bulb {
+    border-radius: 50%;
+}
+.ornament__hoop {
+    animation: hoopRotate var(--animDur) linear infinite;
+    box-shadow: 0 0 0.05em 0.05em #fffa inset, 0 0 0 0.1em #848484 inset;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1em;
+    height: 1em;
+}
+.ornament__cap,
+.ornament__cap-petal,
+.ornament__cap-petal-shadow {
+    height: 0.9em;
+}
+.ornament__cap,
+.ornament__mouth {
+    top: 0.8em;
+    left: 2.5em;
+    width: 1.75em;
+}
+.ornament__cap {
+    animation: petalsRotate var(--animDur) linear infinite;
 }
