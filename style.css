@@ -168,3 +168,39 @@ body {
     height: 6.75em;
     transform: translateZ(-1px);
 }
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #002b66;
+        --fg: #c30031;
+    }
+}
+/* Animations */
+@keyframes hoopRotate {
+    from,
+    50%,
+    to {
+        box-shadow: 0 0 0.05em 0.05em #fffa inset, 0 0 0 0.1em #848484 inset;
+        width: 1em;
+    }
+    25%,
+    75% {
+        box-shadow: 0 0 0.05em 0.05em #fffa inset, 0 0 0 0.1em #fffa inset;
+        width: 0.1em;
+    }
+}
+@keyframes petalGlare {
+    from,
+    25%,
+    50%,
+    75%,
+    to {
+        background-color: #ae8a71;
+    }
+    12.5%,
+    37.5%,
+    62.5%,
+    87.5% {
+        background-color: #d3c0b2;
+    }
+}
