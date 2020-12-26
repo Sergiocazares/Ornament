@@ -204,3 +204,11 @@ body {
         background-color: #d3c0b2;
     }
 }
+@keyframes petalsRotate {
+    from {
+        transform: rotateY(0);
+    }
+    to {
+        transform: rotateY(1turn);
+    }
+}
